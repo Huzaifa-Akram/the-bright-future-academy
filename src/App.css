@@ -7,3 +7,7 @@ body {
   background-color: #fcfcfc;
   overflow-x: hidden;
 }
+
+.BodyContainer {
+  margin: 6%;
+}
