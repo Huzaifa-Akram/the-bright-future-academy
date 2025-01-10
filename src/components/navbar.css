@@ -1,3 +1,7 @@
+body.no-scroll {
+  overflow: hidden;
+}
+
 nav .container {
   margin: 0 auto;
   padding: 0 5vw;
@@ -84,7 +88,8 @@ nav .container {
     top: 100px;
     background-color: #07233b;
     width: 0px;
-    height: calc(100vh - 100px);
+    height: 100vh;
+
     transition: all 0.3s ease-in;
     overflow: hidden;
     z-index: 100;

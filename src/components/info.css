@@ -83,7 +83,7 @@
   white-space: nowrap;
 }
 
-@media screen and (max-width: 804px) {
+@media (max-width: 804px) {
   .Info h1 {
     font-size: 1.8rem;
     text-align: left;
@@ -116,5 +116,12 @@
   }
   .InfoStats .txt {
     font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .InfoButtons {
+    flex-direction: column;
+    gap: 0;
   }
 }
