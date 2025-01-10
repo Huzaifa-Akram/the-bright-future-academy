@@ -1,0 +1,26 @@
+.achievement-note {
+  max-width: 300px;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.oddId {
+  background-color: #896e50;
+  color: white;
+}
+
+.evenId {
+  background-color: white;
+  color: #896e50;
+}
+
+@media (max-width: 450px) {
+  .achievement-note h3 {
+    font-size: 1rem;
+    margin: 0;
+  }
+  .achievement-note p {
+    font-size: 0.8rem;
+    line-height: 1.3;
+  }
+}

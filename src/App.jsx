@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import ContactLinks from "./components/ContactLinks";
 import Info from "./components/Info";
 import IntroVideo from "./components/IntroVideo";
+import Aboutus from "./components/Aboutus";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <div className="BodyContainer">
           <Info />
           <IntroVideo />
+          <Aboutus />
         </div>
       </Router>
     </>

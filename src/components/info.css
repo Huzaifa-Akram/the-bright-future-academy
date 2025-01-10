@@ -48,6 +48,7 @@
 }
 .InfoButtons .bookingBtn {
   background-color: #a37b3d;
+  border: solid 1px #bf9654;
   border: none;
   color: white;
 }
