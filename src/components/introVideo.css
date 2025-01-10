@@ -1,0 +1,25 @@
+.topVideContainer {
+  background-color: #07233b;
+  margin-top: 4rem;
+  border-radius: 20px;
+  padding: 50px;
+}
+.IntroVideoContainer {
+  position: relative;
+  padding: 0;
+
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+}
+
+.IntroVideoContainer iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 20px;
+}
