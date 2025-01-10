@@ -15,9 +15,13 @@ function App() {
         <Navbar />
         <ContactLinks />
         <div className="BodyContainer">
-          <Info />
+          <section id="home">
+            <Info />
+          </section>
           <IntroVideo />
-          <Aboutus />
+          <section id="about-us">
+            <Aboutus />
+          </section>
         </div>
       </Router>
     </>

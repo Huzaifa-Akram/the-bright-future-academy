@@ -92,7 +92,7 @@ nav .container {
 
     transition: all 0.3s ease-in;
     overflow: hidden;
-    z-index: 100;
+    z-index: 10000;
   }
 
   .nav-elements.active {

@@ -1,18 +1,24 @@
-import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import React, { useState } from "react";
 import logo from "../assets/Logo.svg";
 import menu from "../assets/menu.png";
 import "./navbar.css";
 
 const Navbar = () => {
   const [showNav, setShowNav] = useState(false);
+  const [activeLink, setActiveLink] = useState("");
+
   const toggleNavItems = () => {
     setShowNav(!showNav);
-    if (!showNav) {
-      document.body.classList.add("no-scroll");
-    } else {
-      document.body.classList.remove("no-scroll");
+  };
+
+  const scrollToSection = (event, sectionId) => {
+    event.preventDefault();
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
     }
+    setActiveLink(sectionId);
+    toggleNavItems();
   };
 
   return (
@@ -21,35 +27,55 @@ const Navbar = () => {
         <div className="logo">
           <img src={logo} alt="logo" />
         </div>
-        <div className="menu-icon" onClick={toggleNavItems}>
-          <img src={menu} />
+        <div className="menu-icon">
+          <img src={menu} onClick={toggleNavItems} />
         </div>
         <div className={`nav-elements ${showNav && "active"}`}>
           <ul>
             <li>
-              <NavLink to="/" onClick={toggleNavItems}>
+              <a
+                href="#home"
+                className={activeLink === "home" ? "active" : ""}
+                onClick={(e) => scrollToSection(e, "home")}
+              >
                 Home
-              </NavLink>
+              </a>
             </li>
             <li>
-              <NavLink to="/About-Us" onClick={toggleNavItems}>
+              <a
+                href="#about-us"
+                className={activeLink === "about-us" ? "active" : ""}
+                onClick={(e) => scrollToSection(e, "about-us")}
+              >
                 About Us
-              </NavLink>
+              </a>
             </li>
             <li>
-              <NavLink to="/Courses" onClick={toggleNavItems}>
+              <a
+                href="#courses"
+                className={activeLink === "courses" ? "active" : ""}
+                onClick={(e) => scrollToSection(e, "courses")}
+              >
                 Courses
-              </NavLink>
+              </a>
             </li>
             <li>
-              <NavLink to="/Test-Booking" onClick={toggleNavItems}>
+              <a
+                href="#test-booking"
+                className={activeLink === "test-booking" ? "active" : ""}
+                onClick={(e) => scrollToSection(e, "test-booking")}
+              >
                 Test Booking
-              </NavLink>
+              </a>
             </li>
             <li>
-              <NavLink to="/Achievements" onClick={toggleNavItems}>
+              <a
+                href="#achievements"
+                className={activeLink === "achievements" ? "active" : ""}
+                onClick={(e) => scrollToSection(e, "achievements")}
+              >
                 Achievements
-              </NavLink>
+              </a>
             </li>
           </ul>
         </div>
