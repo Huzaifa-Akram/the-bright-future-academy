@@ -23,3 +23,13 @@
   border: none;
   border-radius: 20px;
 }
+
+@media (max-width: 768px) {
+  .topVideContainer {
+    margin-top: 2rem;
+    padding: 20px;
+  }
+  .IntroVideoContainer {
+    aspect-ratio: 25 / 18;
+  }
+}
