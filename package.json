@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist --cname www.thebrightfutureieltsacademy.com"
+    "deploy": "gh-pages -d dist "
   },
   "dependencies": {
     "@svgr/webpack": "^8.1.0",
