@@ -11,7 +11,7 @@ import Aboutus from "./components/Aboutus";
 function App() {
   return (
     <>
-      <Router basename="/the-bright-future-academy">
+      <Router>
         <Navbar />
         <ContactLinks />
         <div className="BodyContainer">
