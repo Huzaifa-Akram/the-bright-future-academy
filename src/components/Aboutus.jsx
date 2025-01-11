@@ -2,7 +2,7 @@ import React from "react";
 import "./aboutus.css";
 
 import { achievementsdata } from "../data/achievementsdata";
-import AchievementNote from "./AchievementNote";
+import AchievementCard from "./AchievementCard";
 import AboutUsImage from "../assets/aboutus.svg";
 
 function Aboutus() {
@@ -25,7 +25,7 @@ function Aboutus() {
 
       <div className="impAchievements">
         {achievementsdata.map((achievement) => (
-          <AchievementNote
+          <AchievementCard
             key={achievement.id}
             id={achievement.id}
             title={achievement.title}

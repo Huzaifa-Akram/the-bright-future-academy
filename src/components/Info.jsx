@@ -1,6 +1,12 @@
 import "./info.css";
 
 function Info() {
+  const scrollTosection = (sectionName) => {
+    const section = document.getElementById(sectionName);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <div className="Info">
       <h1>The Bright Future IELTS Academy.</h1>
@@ -12,7 +18,12 @@ function Info() {
       </p>
 
       <div className="InfoButtons">
-        <button className="courseBtn">Courses</button>
+        <button
+          className="courseBtn"
+          onClick={() => scrollTosection("courses")}
+        >
+          Courses
+        </button>
         <button className="bookingBtn">Book Test Date</button>
       </div>
 

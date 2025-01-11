@@ -7,6 +7,7 @@ import ContactLinks from "./components/ContactLinks";
 import Info from "./components/Info";
 import IntroVideo from "./components/IntroVideo";
 import Aboutus from "./components/Aboutus";
+import Courses from "./components/Courses";
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
           <IntroVideo />
           <section id="about-us">
             <Aboutus />
+          </section>
+          <section id="courses">
+            <Courses />
           </section>
         </div>
       </Router>

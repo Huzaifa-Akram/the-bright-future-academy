@@ -1,7 +1,7 @@
 import React from "react";
-import "./achievementNote.css";
+import "./achievementCard.css";
 
-function AchievementNote(props) {
+function AchievementCard(props) {
   return (
     <div
       className={`achievement-note ${props.id % 2 === 0 ? "evenId" : "oddId"}`}
@@ -12,4 +12,4 @@ function AchievementNote(props) {
   );
 }
 
-export default AchievementNote;
+export default AchievementCard;
