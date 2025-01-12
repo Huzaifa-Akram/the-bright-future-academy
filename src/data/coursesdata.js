@@ -1,9 +1,9 @@
-import ielts from "../assets/ielts.svg";
-import pte from "../assets/pte.svg";
-import langCourse from "../assets/langCourse.svg";
-import langCert from "../assets/langCert.svg";
-import spokenCourse from "../assets/spokenCourse.svg";
-import oxford from "../assets/oxford.svg";
+import ielts from "../assets/ielts.png";
+import pte from "../assets/pte.png";
+import langCourse from "../assets/langCourse.png";
+import langCert from "../assets/langCert.png";
+import spokenCourse from "../assets/spokenCourse.png";
+import oxford from "../assets/oxford.png";
 
 export const coursesdata = [
   {
