@@ -1,11 +1,16 @@
 import React from "react";
 import "./aboutus.css";
+import { useNavigate } from "react-router-dom";
 
 import { achievementsdata } from "../data/achievementsdata";
 import AchievementCard from "./AchievementCard";
 import AboutUsImage from "../assets/aboutus.svg";
 
 function Aboutus() {
+  const navigate = useNavigate("/");
+  const gotToachievements = () => {
+    navigate("/achievements");
+  };
   return (
     <div className="aboutus">
       <div className="aboutus-container">
@@ -19,7 +24,7 @@ function Aboutus() {
             marking the beginning of a dedicated journey to help students
             achieve their language goals.
           </p>
-          <button>Achievements {">"}</button>
+          <button onClick={gotToachievements}>Achievements {">"}</button>
         </div>
       </div>
 
