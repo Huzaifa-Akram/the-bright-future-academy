@@ -10,6 +10,7 @@ import Aboutus from "./components/Aboutus";
 import Courses from "./components/Courses";
 import Achievements from "./pages/Achievements";
 import BookTestDate from "./components/BookTestDate";
+import Footer from "./components/Footer";
 
 function App() {
   const [activesection, setActivesection] = useState("");
@@ -37,9 +38,10 @@ function App() {
                 <section id="courses">
                   <Courses />
                 </section>
-                <section id="book-test-date">
+                <section id="test-booking">
                   <BookTestDate />
                 </section>
+                <Footer />
               </div>
             }
           />
