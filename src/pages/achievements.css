@@ -1,0 +1,37 @@
+.Achievements {
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+.Achievements img {
+  width: 100%;
+  height: auto;
+}
+.Achievement1,
+.Achievement3,
+.Achievement5,
+.Achievement7,
+.Achievement9 {
+  align-self: flex-start;
+}
+.Achievement2,
+.Achievement4,
+.Achievement6,
+.Achievement8 {
+  align-self: flex-end;
+}
+
+.back {
+  height: 60px;
+  width: 60px;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  cursor: pointer;
+}
+
+.back:hover {
+  transform: scale(1.2);
+}

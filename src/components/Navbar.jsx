@@ -2,22 +2,26 @@ import React, { useState } from "react";
 import logo from "../assets/Logo.svg";
 import menu from "../assets/menu.png";
 import "./navbar.css";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [showNav, setShowNav] = useState(false);
-  const [activeLink, setActiveLink] = useState("");
+  const [activesection, setActivesection] = useState("");
+  const navigate = useNavigate();
 
   const toggleNavItems = () => {
     setShowNav(!showNav);
   };
 
-  const scrollToSection = (event, sectionId) => {
-    event.preventDefault();
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-    setActiveLink(sectionId);
+  const scrollToSection = (sectionId, path = "/") => {
+    navigate(path);
+    setActivesection(sectionId);
+    setTimeout(() => {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100);
     toggleNavItems();
   };
 
@@ -33,49 +37,47 @@ const Navbar = () => {
         <div className={`nav-elements ${showNav && "active"}`}>
           <ul>
             <li>
-              <a
-                href="#home"
-                className={activeLink === "home" ? "active" : ""}
-                onClick={(e) => scrollToSection(e, "home")}
+              <button
+                onClick={() => scrollToSection("main", "/")}
+                className={activesection === "main" ? "active" : ""}
               >
                 Home
-              </a>
+              </button>
             </li>
             <li>
-              <a
-                href="#about-us"
-                className={activeLink === "about-us" ? "active" : ""}
-                onClick={(e) => scrollToSection(e, "about-us")}
+              <button
+                onClick={() => scrollToSection("about-us", "/")}
+                className={activesection === "about-us" ? "active" : ""}
               >
                 About Us
-              </a>
+              </button>
             </li>
             <li>
-              <a
-                href="#courses"
-                className={activeLink === "courses" ? "active" : ""}
-                onClick={(e) => scrollToSection(e, "courses")}
+              <button
+                onClick={() => scrollToSection("courses", "/")}
+                className={activesection === "courses" ? "active" : ""}
               >
                 Courses
-              </a>
+              </button>
             </li>
             <li>
-              <a
-                href="#test-booking"
-                className={activeLink === "test-booking" ? "active" : ""}
-                onClick={(e) => scrollToSection(e, "test-booking")}
+              <button
+                onClick={() => scrollToSection("test-booking", "/")}
+                className={activesection === "test-booking" ? "active" : ""}
               >
                 Test Booking
-              </a>
+              </button>
             </li>
             <li>
-              <a
-                href="#achievements"
-                className={activeLink === "achievements" ? "active" : ""}
-                onClick={(e) => scrollToSection(e, "achievements")}
+              <NavLink
+                to="/achievements"
+                onClick={() => {
+                  toggleNavItems();
+                  setActivesection("achievements");
+                }}
               >
                 Achievements
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>
