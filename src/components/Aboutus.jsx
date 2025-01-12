@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 import { achievementsdata } from "../data/achievementsdata";
 import AchievementCard from "./AchievementCard";
-import AboutUsImage from "../assets/aboutus.svg";
+import AboutUsImage from "../assets/aboutus.png";
 
 function Aboutus() {
   const navigate = useNavigate("/");
