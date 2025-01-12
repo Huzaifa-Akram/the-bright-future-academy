@@ -6,10 +6,11 @@ import { achievementsdata } from "../data/achievementsdata";
 import AchievementCard from "./AchievementCard";
 import AboutUsImage from "../assets/aboutus.png";
 
-function Aboutus() {
+function Aboutus({ setActivesection }) {
   const navigate = useNavigate("/");
   const gotToachievements = () => {
     navigate("/achievements");
+    setActivesection("achievements");
   };
   return (
     <div className="aboutus">

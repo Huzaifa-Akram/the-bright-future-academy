@@ -11,10 +11,14 @@ import Courses from "./components/Courses";
 import Achievements from "./pages/Achievements";
 
 function App() {
+  const [activesection, setActivesection] = useState("");
   return (
     <>
       <HashRouter>
-        <Navbar />
+        <Navbar
+          activesection={activesection}
+          setActivesection={setActivesection}
+        />
         <ContactLinks />
 
         <Routes>
@@ -27,7 +31,7 @@ function App() {
                 </section>
                 <IntroVideo />
                 <section id="about-us">
-                  <Aboutus />
+                  <Aboutus setActivesection={setActivesection} />
                 </section>
                 <section id="courses">
                   <Courses />

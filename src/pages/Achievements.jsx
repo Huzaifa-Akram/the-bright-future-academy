@@ -63,7 +63,9 @@ function Achievements() {
           <span className="lightbox-close" onClick={closeLightbox}>
             ✖
           </span>
-          <img src={currentImage} alt="Focused" className="lightbox-image" />
+          <div className="lightbox-img">
+            <img src={currentImage} alt="Focused" className="lightbox-image" />
+          </div>
         </div>
       )}
     </div>

@@ -4,9 +4,9 @@ import menu from "../assets/menu.png";
 import "./navbar.css";
 import { NavLink, useNavigate } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ activesection, setActivesection }) => {
   const [showNav, setShowNav] = useState(false);
-  const [activesection, setActivesection] = useState("");
+
   const navigate = useNavigate();
 
   const toggleNavItems = () => {
