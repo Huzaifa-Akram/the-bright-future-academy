@@ -14,7 +14,7 @@
 
 .courses > p {
   font-size: 1.1rem;
-  color: #bf9654;
+  color: #394f62;
   margin: 0 auto;
   text-align: center;
   font-weight: 600;
@@ -31,7 +31,7 @@
 
 @media (max-width: 768px) {
   .courses > p {
-    font-size: 1rem;
+    font-size: 0.9rem;
     width: 100%;
   }
 }
@@ -49,7 +49,7 @@
     font-size: 0.8rem;
     width: 100%;
     text-align: left;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 1.3;
   }
 }

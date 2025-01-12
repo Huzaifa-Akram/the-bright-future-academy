@@ -9,6 +9,7 @@ import IntroVideo from "./components/IntroVideo";
 import Aboutus from "./components/Aboutus";
 import Courses from "./components/Courses";
 import Achievements from "./pages/Achievements";
+import BookTestDate from "./components/BookTestDate";
 
 function App() {
   const [activesection, setActivesection] = useState("");
@@ -35,6 +36,9 @@ function App() {
                 </section>
                 <section id="courses">
                   <Courses />
+                </section>
+                <section id="book-test-date">
+                  <BookTestDate />
                 </section>
               </div>
             }

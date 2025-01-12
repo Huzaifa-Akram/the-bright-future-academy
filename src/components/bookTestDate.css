@@ -1,0 +1,65 @@
+.book-test-date {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+  padding: 50px;
+  background-color: #ecdfcb;
+  border-radius: 20px;
+}
+
+.book-test-date h2 {
+  font-size: 2rem;
+  color: #896e50;
+  margin: 0;
+  text-align: center;
+}
+
+.book-test-date p {
+  font-size: 1rem;
+  color: #394f62;
+  margin: 25px auto;
+  text-align: center;
+  font-weight: 600;
+  width: 80%;
+}
+.book-test-date button {
+  padding: 10px 90px;
+  background-color: #896e50;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.book-test-date button:hover {
+  background-color: #bf9654;
+}
+
+.book-test-date span {
+  color: #896e50;
+}
+
+@media (max-width: 768px) {
+  .book-test-date {
+    padding: 20px;
+    align-items: flex-start;
+  }
+  .book-test-date h2 {
+    font-size: 1.2rem;
+    text-align: left;
+    margin: 0;
+  }
+  .book-test-date p {
+    font-size: 0.8rem;
+    width: 100%;
+    text-align: left;
+  }
+  .book-test-date button {
+    align-self: center;
+    padding: 10px 50px;
+  }
+}
