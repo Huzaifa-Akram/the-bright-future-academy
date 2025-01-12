@@ -24,7 +24,12 @@ function Info() {
         >
           Courses
         </button>
-        <button className="bookingBtn">Book Test Date</button>
+        <button
+          className="bookingBtn"
+          onClick={() => scrollTosection("test-booking")}
+        >
+          Book Test Date
+        </button>
       </div>
 
       <div className="InfoStats">
