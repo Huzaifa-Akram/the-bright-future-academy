@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { HashRouter, Route, Routes, Link } from "react-router-dom";
 import "./App.css";
 
 import Navbar from "./components/Navbar";
@@ -13,7 +13,7 @@ import Achievements from "./pages/Achievements";
 function App() {
   return (
     <>
-      <Router>
+      <HashRouter>
         <Navbar />
         <ContactLinks />
 
@@ -38,7 +38,7 @@ function App() {
 
           <Route path="/achievements" element={<Achievements />} />
         </Routes>
-      </Router>
+      </HashRouter>
     </>
   );
 }
